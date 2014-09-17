@@ -1,7 +1,7 @@
 package com.example.dagger.module;
 
-import com.example.fragement.FirstFragment;
-import com.example.fragement.SecondFragment;
+import com.example.fragment.FirstFragment;
+import com.example.fragment.SecondFragment;
 import com.example.transaction.AccountTransactionPerformer;
 import com.example.transaction.PayUAccountTransactionPerformer;
 import com.example.transaction.WireAccountTransactionPerformer;

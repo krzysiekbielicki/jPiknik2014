@@ -2,7 +2,7 @@ package com.example.dagger.module;
 
 import com.example.BarcodeScanner;
 import com.example.MainActivity;
-import com.example.fragement.FirstFragment;
+import com.example.fragment.FirstFragment;
 import dagger.Module;
 import dagger.Provides;
 

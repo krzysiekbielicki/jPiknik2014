@@ -1,7 +1,7 @@
 package com.example.dagger.module;
 
 import com.example.MainActivity;
-import com.example.fragement.FirstFragment;
+import com.example.fragment.FirstFragment;
 import com.squareup.otto.Bus;
 import dagger.Module;
 import dagger.Provides;
