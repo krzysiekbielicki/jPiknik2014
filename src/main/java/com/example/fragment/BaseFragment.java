@@ -65,7 +65,11 @@ public abstract class BaseFragment extends Fragment {
     }
 
     private double getAmountFromUi() {
-        return Double.parseDouble(amount.getText().toString());
+        String value = amount.getText().toString();
+        if (value.length() == 0) {
+            return 0;
+        }
+        return Double.parseDouble(value);
     }
 
     protected abstract AccountTransactionPerformer getAccountTransactionPerformer();

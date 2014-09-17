@@ -21,4 +21,12 @@ public class TransactionPerformedEvent {
     public enum Status {
         SUCCESS, FAILED;
     }
+
+    @Override
+    public String toString() {
+        return "TransactionPerformedEvent{" +
+                "status=" + status +
+                ", amount=" + amount +
+                '}';
+    }
 }

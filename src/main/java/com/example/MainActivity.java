@@ -3,6 +3,7 @@ package com.example;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTabHost;
+import android.widget.Toast;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import com.example.dagger.Injector;
@@ -34,7 +35,7 @@ public class MainActivity extends FragmentActivity {
     }
 
     private void setupTabs() {
-        tabHost.setup(this, getSupportFragmentManager());
+        tabHost.setup(this, getSupportFragmentManager(), R.id.content);
         tabHost.addTab(tabHost.newTabSpec("payu").setIndicator("PayU"), FirstFragment.class, null);
         tabHost.addTab(tabHost.newTabSpec("wire").setIndicator("Wire"), SecondFragment.class, null);
     }
@@ -47,7 +48,7 @@ public class MainActivity extends FragmentActivity {
 
     @Subscribe
     public void onTransactionPerformed(TransactionPerformedEvent event) {
-
+        Toast.makeText(this, "onTransactionPerformed: " + event, Toast.LENGTH_SHORT).show();
     }
 }
 
