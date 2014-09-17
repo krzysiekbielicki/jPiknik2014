@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/amount"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignBottom="@+id/random"/>
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/random"
+            android:id="@+id/random"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/amount"/>
+
+    <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/scan"
+            android:src="@drawable/ic_camera"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/random"
+            android:layout_alignBottom="@+id/random"
+            android:layout_alignParentRight="true"/>
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/transfer"
+            android:id="@+id/transfer"
+            android:layout_below="@+id/amount"
+            android:layout_centerHorizontal="true"/>
+</RelativeLayout>
