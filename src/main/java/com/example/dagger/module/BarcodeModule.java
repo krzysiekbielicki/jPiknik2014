@@ -1,24 +1,21 @@
 package com.example.dagger.module;
 
 import com.example.BarcodeScanner;
-import com.example.MainActivity;
 import com.example.fragment.FirstFragment;
+import com.example.fragment.SecondFragment;
 import dagger.Module;
 import dagger.Provides;
 
-import javax.inject.Singleton;
-
 @Module(
         injects = {
-                MainActivity.class,
-                FirstFragment.class
+                FirstFragment.class,
+                SecondFragment.class
         },
         complete = false,
         library = true
 )
 public class BarcodeModule {
 
-    @Singleton
     @Provides
     public BarcodeScanner provideBarcodeScanner() {
         return new BarcodeScanner();

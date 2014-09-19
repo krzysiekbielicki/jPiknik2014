@@ -14,6 +14,10 @@ public class Injector {
         }
     }
 
+    public static void append(Object... modules) {
+        objectGraph.plus(modules);
+    }
+
     public static void inject(Object target) {
         objectGraph.inject(target);
     }

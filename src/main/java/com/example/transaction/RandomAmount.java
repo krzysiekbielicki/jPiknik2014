@@ -23,7 +23,7 @@ public class RandomAmount {
         return amount;
     }
 
-    public double round(double unrounded) {
+    private double round(double unrounded) {
         BigDecimal bd = new BigDecimal(unrounded);
         BigDecimal rounded = bd.setScale(PRECISION, BigDecimal.ROUND_HALF_EVEN);
         return rounded.doubleValue();
