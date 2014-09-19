@@ -1,5 +1,7 @@
 package com.example.dagger.module;
 
+import com.example.dagger.PayU;
+import com.example.dagger.Wire;
 import com.example.fragment.FirstFragment;
 import com.example.fragment.SecondFragment;
 import com.example.transaction.AccountTransactionPerformer;
@@ -8,8 +10,6 @@ import com.example.transaction.WireAccountTransactionPerformer;
 import com.squareup.otto.Bus;
 import dagger.Module;
 import dagger.Provides;
-
-import javax.inject.Named;
 
 @Module(
         injects = {
@@ -22,13 +22,13 @@ import javax.inject.Named;
 public class TransactionModule {
 
     @Provides
-    @Named("payu")
+    @PayU
     public AccountTransactionPerformer providePayUAccountTransactionPerformer(Bus bus) {
         return new PayUAccountTransactionPerformer(bus);
     }
 
     @Provides
-    @Named("wire")
+    @Wire
     public AccountTransactionPerformer provideWireAccountTransactionPerformer(Bus bus) {
         return new WireAccountTransactionPerformer(bus);
     }

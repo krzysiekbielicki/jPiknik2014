@@ -1,14 +1,14 @@
 package com.example.fragment;
 
+import com.example.dagger.PayU;
 import com.example.transaction.AccountTransactionPerformer;
 
 import javax.inject.Inject;
-import javax.inject.Named;
 
 public class FirstFragment extends BaseFragment {
 
     @Inject
-    @Named("payu")
+    @PayU
     AccountTransactionPerformer payuAccountTransactionPerformer;
 
     @Override

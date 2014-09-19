@@ -29,7 +29,7 @@ public class BaseFragmentTest {
 
     @Before
     public void setUp() throws Exception {
-        Injector.append(new RandomAmountMockModule());
+        Injector.reset(new RandomAmountMockModule());
         Injector.inject(this);
         fragment = createFragment();
     }
